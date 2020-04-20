@@ -1,0 +1,35 @@
+<!--pages/oneinfo/oneinfo.wxml-->
+<!--pages/goods/goods.wxml-->
+<view class="goods-content">
+  <view wx:if="{{info.ithumbs}}" class="goods-banner">
+    <image src="{{imgurl}}{{info.ithumbs}}"></image>
+  </view>
+  <view wx:else class="goods-banner">
+      <view class="flex">
+        <text>暂无图片</text>
+      </view>
+  </view>
+  <view class="content">
+    <view class="content-con">
+      <text>发布者：{{info.userinfo.nickname}}</text>
+      <text>发布时间:{{info.create_time}}</text>
+      <view class="message">
+        <view class="price-goods">
+          电话：{{info.tell}}
+        </view>
+      </view>
+      <view class="message">
+        <view class="price-goods">
+          信息类别：{{info.state==1?"丢失物品":"捡还物品"}}
+        </view>
+      </view>
+    </view>
+</view>
+<view class="else">
+    <view class="price-goods">
+          描述：
+    </view>
+</view>
+<view class="txt">{{info.idesc}}</view>
+</view>
+

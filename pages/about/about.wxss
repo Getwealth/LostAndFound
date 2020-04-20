@@ -1,0 +1,21 @@
+/* pages/about/about.wxss */
+.box{
+  width: 702rpx;
+  margin: auto;
+}
+.take{
+  width: 100%;
+  height: 300rpx;
+}
+.take image{
+  width: 100%;
+  height: 100%;
+}
+.img{
+  width: 100%;
+  height: 702rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}

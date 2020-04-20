@@ -1,0 +1,151 @@
+/* pages/login/login.wxss */
+@import"../../common/iconfont/iconfont.wxss";
+
+.body{
+  width: 702rpx;
+  overflow: hidden;
+  margin: auto;
+  padding-top: 200rpx;
+}
+.header1{
+  position: fixed;
+  top: 0;
+  margin: auto;
+  width: 702rpx;
+  height: 200rpx;
+  border-bottom: 1rpx solid #d6d6d4;
+  box-sizing: border-box;
+  background: #f2faff;
+}
+.search{
+  width: 100%;
+  height: 80rpx;
+  border: 1px solid #e8f6ff;
+  background: #f2faff;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.search-input{
+  margin: 5rpx 140rpx 0 100rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  float: left;
+  color: #c8d9e6;
+}
+.search .iconfont{
+  margin-top: 8rpx;
+  line-height: 60rpx;
+  float: left;
+  color: #97d6b3;
+}
+.choose-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.choose{
+  width: 32%;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #1296db;
+  background: #f7f3f3;
+  border-radius: 40rpx;
+}
+.select{
+  color:#f7f3f3;
+  background: #1296db;
+}
+.infomation{
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10rpx;
+  border: 1rpx outset #97d6b3;
+  box-sizing: border-box;
+}
+.senderinfo{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.photo{
+  width: 80rpx;
+  margin: 0 6rpx 0;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.photo image{
+  width: 100%;
+  height: 100%;
+}
+.nickname{
+  flex: 1;
+  padding-left: 10rpx;
+  color: #97d6b3;
+  font-size: 24rpx;
+  text-align: left;
+  line-height: 80rpx;
+}
+.kind{
+  width: 200rpx;
+  color: #97d6b3;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.kind-color{
+  color: #1296db;
+}
+.resinfo{
+  width: 100%;
+  height: 340rpx;
+}
+.desc{
+  width: 100%;
+  height: 80rpx;
+  padding-top: 8rpx;
+  border-top: 1rpx dashed #97d6b3;
+  box-sizing: border-box;
+}
+.text{
+  color: #a8a4a4;
+  overflow: hidden;
+  font-size: 30rpx;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.img{
+  width: 100%;
+  height: 260rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.send-time{
+  width: 100%;
+  height: 80rpx;
+  text-align: right;
+  line-height: 80rpx;
+  color: #97d6b3
+}
+.no-img{
+  width: 100%;
+  height: 260rpx;
+  line-height: 1;
+  text-align: center;
+}

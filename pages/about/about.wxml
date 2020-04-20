@@ -1,0 +1,9 @@
+<!--pages/about/about.wxml-->
+<view class="box">
+   <view class="take">
+      <image src="../../common/image/timg.jpg"></image>
+   </view>
+   <view class="img">
+      <image src="../../common/image/my.jpg" bindtag="saveimg"></image>
+   </view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/mine/mine.wxml-->
+<view class="position" wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='../image/img/img1.jpg'></image>
+        </view>
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+ 
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+<view class="personalWrap">
+    <view class="personalMe" wx:if="{{userinfo}}" >
+        <image src="{{userinfo.avatarurl}}" style="width:68px;height:68px;border:1px solid #ddd;float:left;margin:20rpx 20rpx;border-radius: 50%;"></image>
+        <view class="personalInfo">
+            <text>用户名: {{userinfo.nickname}}</text>
+        </view>
+    </view>
+    <view wx:else class="personalMe">
+      <view class="flex">
+        <button type="primary" size="mini" bindtap="primary">点击登录 </button>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="personalList">
+    <navigator url="/pages/mySend/mySend?userid={{userinfo.openid}}">
+      <view class="iconfont icon-wodefabu">我的发布</view>
+    </navigator>
+    <navigator url="/pages/about/about">
+      <view class="iconfont icon-guanyuwomen" >关于我们</view>
+    </navigator>
+    <navigator url="/pages/about/about">
+      <view class="iconfont  icon-yijianfankui"style="border:none;">意见反馈</view>
+    </navigator>
+    </view>
+</view>

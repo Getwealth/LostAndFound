@@ -1,0 +1,116 @@
+/* pages/oneinfo/oneinfo.wxss */
+.goods-content{
+  width: 702rpx;
+  background: #fff;
+  margin: auto;
+  overflow: hidden;
+}
+.goods-banner{
+  width: 100%;
+  height: 686rpx;
+}
+swiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-item image{
+  width: 100%;
+  height: 686rpx;
+  box-sizing: border-box;
+}
+.content{
+  width: 100%;
+  overflow: hidden;
+}
+.content-con{
+  width: 100%;
+  height:100%;
+}
+.content-con text:first-child{
+  font-size: 30rpx;
+  color:rgba(0,0,0,0.6);
+  display: block;
+  margin-bottom: 14rpx;
+}
+.content-con text:nth-child(2){
+  font-size: 22rpx;
+  color:rgba(0,0,0,0.3);
+  display: block;
+  margin-bottom: 18rpx;
+}
+.message{
+  width: 100%;
+  height:36rpx; 
+}
+.price-goods{
+  float: left;
+  font-size:26rpx;
+  color:#fbb548;
+  line-height: 36rpx;
+}
+.order-price{
+  float: left;
+  width: 78rpx;
+  height:36rpx;
+  background-color: rgba(65,178,252,0.1);
+  border-radius: 50rpx;
+  font-size:26rpx;
+  color:#4ebbfe;
+  line-height: 36rpx;
+  text-align: center;
+  margin-left: 24rpx;
+  margin-right: 30rpx;
+}
+.flex{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 88rpx;
+}
+.service-goods{
+  width: 112rpx;
+  height:36rpx;
+  background-color: rgba(54,214,129,0.1);
+  border-radius: 50rpx;
+  font-size:26rpx;
+  color:#65dd9a;
+  line-height: 36rpx;
+  text-align: center;
+}
+.message-right{
+  float: right;
+  height: 100%;
+}
+.message-right view:nth-child(1){
+  width: 5rpx;
+  height:5rpx;
+  border-radius: 50rpx;
+  background-color: #65dd9a;
+  float: left;
+  margin-top:18rpx;
+  margin-right: 10rpx;
+}
+.message-right view:nth-child(2){
+  float: left;
+  font-size:20rpx;
+  color:rgba(0,0,0,0.3);
+  line-height: 36rpx;
+  margin-right: 10rpx;
+}
+.message-right view:nth-child(3){
+  float: left;
+  font-size:20rpx;
+  color:#4ebbfe;
+  line-height: 36rpx;
+  margin-bottom: 18rpx;
+}
+.else{
+  width: 100%;
+}
+.txt{
+  clear: both;
+  background: #4ebbfe;
+  font-size: 36rpx;
+}

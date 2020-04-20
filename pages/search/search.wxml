@@ -1,0 +1,43 @@
+ <view class="search__top">
+      <form class="search__form" bindsubmit="searchSubmit">
+        <input value="{{search.searchValue}}" placeholder="关键字搜索" class="search__input" bindfocus="focusSearch" bindinput="searchActiveChangeinput" auto-focus="true" name="teamSearchKeyWords" style='padding-left:40rpx' />
+         <view class="search__icon search__active" style="background:none;position:absolute;border:none;left:4;top:15rpx;bottom:0;width:40rpx;">
+          <icon type="search" size="13" color="#888" style="position:absolute;float:left;margin-right:20rpx;"></icon>
+        </view>   
+        <button wx:if="{{search.showClearBtn}}" catchtap="searchActiveChangeclear" form-type="reset" style="background:none;position:absolute;border:none;right:0;top:0;bottom:0;width:80rpx;">
+          <icon type="clear" size="19" color="#aaa" style="position:absolute;right:15rpx;top:10rpx;z-index:3;"></icon>
+        </button> 
+      </form>
+ </view>
+    <view class="panel" wx:if="{{search.showClearBtn}}" catchtap="searchSubmit"  >
+      <view class="panel__bd">
+        <view class="media-box media-box_small-appmsg">
+          <view class="cells">
+            <view class="a cell cell_access clearfix">
+              <view class="cell__hd" style="float:left;background-color:#1AAD19;border-radius:7rpx;width:80rpx;height:80rpx;line-height:80rpx;text-align:center;">
+                <icon type="search" size="24" color="#fff" style="margin-top:20rpx;"></icon>
+              </view> 
+              <view class="cell__bd cell_primary clearfix">
+                <view class="p" style="padding-left:20rpx;font-size:34rpx;float:left;"><text style="color:#000;">搜索:</text><text style="color:#1AAD19;margin-left:20rpx;">{{search.searchValue}}</text></view>
+              </view>
+              <text class="cell__ft"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="result-s">
+        <block wx:for="{{searchResult}}" wx:for-item="item" wx:key="id" >
+      <navigator url="/pages/oneinfo/oneinfo?id={{item.id}}&&userid={{item.userid}}">
+        <view class="person__top__wrapper">
+          <view class="person__top__avatar">
+            <image src="{{imgurl}}{{item.ithumbs}}" />
+          </view>
+          <view class="person__top__userinfo">
+            <view class="h3 justify">{{item.create_time}}</view>
+            <view class="h4 justify">{{item.idesc}}</view>
+          </view>
+        </view>
+      </navigator>
+      </block>
+    </view>

@@ -1,0 +1,41 @@
+<view>
+    <view class="body">
+        <view class="header1">
+            <navigator class="search" url="/pages/search/search">
+              <text class="search-input">搜索需要查找的物品的关键字                 </text>
+              <text class="iconfont icon-huabanfuben "></text>
+            </navigator>
+            <view class="choose-box">
+                <view class="choose {{where==0?'select':''}}" bindtap="all">全部</view>
+                <view class="choose {{where==1?'select':''}}" bindtap="lose">丢失的物品</view>
+                <view class="choose {{where==2?'select':''}}" bindtap="found">捡到的物品</view>
+            </view>
+        </view>
+        <block wx:for="{{infos}}" wx:key="id">
+          <navigator url="/pages/oneinfo/oneinfo?id={{item.id}}&&userid={{item.userid}}">
+              <view class="infomation">
+              <view class="senderinfo">
+                <view class="photo">
+                  <image src="{{item.userinfo.avatarurl}}"></image>
+                </view>
+                <text class="nickname">{{item.userinfo.nickname}}</text>
+                <text class="kind {{item.istate==1?'kind-color':''}}">{{item.istate==1?"丢失物品":"捡还物品"}}</text>
+              </view>
+              <view class="resinfo">
+                <view class="desc">
+                  <text class="text">{{item.idesc}}</text>
+                </view>
+                <view class="img">
+                  <image wx:if="{{item.ithumbs}}" lazy-load="true"  src="{{imgurl+item.ithumbs}}"></image>
+                  <view wx:else class="no-img">无图片</view>
+                </view>
+              </view>
+              <view class="send-time">
+                  <text class="time">发布时间:{{item.create_time}}</text>
+              </view>
+            </view>
+          </navigator>
+        </block>
+        
+    </view>
+</view>

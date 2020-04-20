@@ -1,0 +1,20 @@
+<!--pages/mySend/mySend.wxml-->
+ <view class="result-s">
+        <block wx:for="{{mySends}}" wx:for-item="item" wx:key="id" >
+      
+        <view class="person__top__wrapper">
+        <navigator url="/pages/oneinfo/oneinfo?id={{item.id}}&&userid={{item.userid}}">
+          <view class="person__top__avatar">
+            <image src="{{imgurl}}{{item.ithumbs}}" />
+          </view>
+        </navigator>
+          <view class="person__top__userinfo">
+            <view class="h3 justify">{{item.create_time}}</view>
+            <view class="h4 justify">
+              <text>完成情况:{{item.isfinished==1?"已完成":"未完成"}}</text>
+              <switch class="switch" checked="{{item.isfinished==1?true:false}}" id="{{item.id}}"  bindchange="ifinished"/>
+            </view>
+          </view>
+        </view>
+      </block>
+</view>

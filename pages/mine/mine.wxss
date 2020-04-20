@@ -1,0 +1,110 @@
+/* pages/mine/mine.wxss */
+@import"../../common/iconfont/iconfont.wxss";
+.position{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
+}
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+page{
+    font-size:30rpx;
+}
+ .flex{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+.personalMe{
+    height:210rpx;
+    margin:30rpx 0rpx 30rpx 0rpx;
+    background-color: #1296db;
+}
+.personalInfo{
+    float:left;
+    margin: 20rpx 0rpx 0rpx 20rpx;
+}
+.personalInfo wx-text{
+    display: block;
+    line-height:70rpx;
+    height:70rpx;
+}
+.personalList{
+    background-color: #fff;
+    padding:0rpx 20rpx;
+}
+.personalList view{
+    color: #1296db;
+    display: block;
+    line-height:70rpx;
+    height:70rpx;
+    border-bottom:1px solid #ddd;
+}
+.personalList wx-span{
+    float:right;
+    font-size:40rpx;
+    margin-top:-63rpx;
+    color:#ddd;
+}
+.personalList view{
+    position:relative;
+}
+.iconfont{
+    font-size:14px;
+}
+.personalList view:before{
+    font-size:20px !important;
+    font-weight:bold;
+    padding-right: 10rpx;
+    text-align:center;
+    vertical-align:top;
+}
+.personalList view:after{
+    content:'';
+    height:10px;
+    width:10px;
+    display:block;
+    border:1px solid #ccc;
+    border-left-width:0;
+    border-bottom-width:0;
+    position:absolute;
+    top:10px;
+    right:6px;
+    -webkit-transform:rotate(45deg);
+       -moz-transform:rotate(45deg);
+            transform:rotate(45deg);
+}
